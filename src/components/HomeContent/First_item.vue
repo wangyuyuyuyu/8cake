@@ -38,23 +38,23 @@
     padding: 0;
   }
   .first_item{
-    width: 158px;
-    height: 150px;
+    width: 210px;
+    height: 200px;
     overflow: hidden;
     position: relative;
   }
   .first_item img{
     position: absolute;
     z-index: -1;
-    width: 158px;
-    height: 160px;
+    width: 210px;
+    height: 200px;
     top: 0;
     left: 0;
   }
   .first_item_div{
-    margin-top:150px;
-    width: 158px;
-    height: 150px;
+    margin-top:200px;
+    width: 210px;
+    height: 200px;
     color:white;
     background: #e69ea8;
     z-index: 1;
@@ -87,7 +87,7 @@
     vertical-align: middle;
   }
   .first_item_click{
-    width: 140px;
+    width: 200px;
     border-top: 1px solid white;
     font-size: 10px;
     margin-left: 10px;
