@@ -1,6 +1,6 @@
 <template>
-    <div style="width: 740px;margin:0 auto;">
-      <First_item style="width: 160px;float: left" v-for="v in arr" ></First_item>
+    <div style="width: 950px;margin:0 auto;overflow: hidden;">
+      <First_item style="width: 210px;float: left;margin-left:22px" v-for="v in arr" ></First_item>
     </div>
 </template>
 
