@@ -1,12 +1,14 @@
 <template>
     <div>
-      <header class="head-wrapper">
+      <header >
+        <div class="head-wrapper">
         <div class="head-content">
           <img class="logo" src="../../assets/images/logo.gif" alt="">
           <div class="head-content-right">
             <div class="site-nav clearfix">
               <div>
-                <a href="#"><span>登录</span></a>
+                <!--<router-link to="/foods" tag="span" class="goods">商品</router-link>-->
+                <router-link to="/login"><span>登录</span></router-link>
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                 <a href="#"><span>注册</span></a>
               </div>
@@ -27,7 +29,7 @@
               </div>
             </div>
             <ul class="menu clearfix">
-              <a href=""><li>首页</li></a>
+              <router-link to="/"><li>首页</li></router-link>
               <span>|</span>
               <a href=""><li>蛋糕名录</li></a>
               <span>|</span>
@@ -40,9 +42,10 @@
             <!--这里是swiper-->
           </div>
         </div>
+        </div>
       </header>
       <div class="centent">
-        <Home-content></Home-content>
+        <router-view></router-view>
       </div>
       <footer class="footer-wrapper">
         <div class="footer-content">
@@ -85,15 +88,21 @@
 
 <script>
   import HomeContent from "../HomeContent/HomeContent"
-    export default {
+  // import Login from "../Login/Login"
+
+  export default {
         name: "PageFramework",
         components:{
-          HomeContent
+          HomeContent,
+          // Login
         }
     }
 </script>
 
 <style scoped>
+  header{
+    background:#6a3e4f;
+  }
   .head-wrapper{
     background: url("../../assets/images/bg-body.gif") repeat-x center top;
     width: 100%;
