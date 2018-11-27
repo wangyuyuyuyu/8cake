@@ -41,8 +41,11 @@
           </div>
         </div>
       </header>
+      <div class="centent">
+        <Home-content></Home-content>
+      </div>
       <footer class="footer-wrapper">
-        <div class="footer-content clearfix">
+        <div class="footer-content">
           <div class="footer-item">
             <p class="footer-title">当天制作新鲜直达</p>
             <p>选用新鲜材料当天制作，让您当日就能体验新鲜食材，最快速的让您感受健康品质享受。</p>
@@ -81,8 +84,12 @@
 </template>
 
 <script>
+  import HomeContent from "../HomeContent/HomeContent"
     export default {
-        name: "PageFramework"
+        name: "PageFramework",
+        components:{
+          HomeContent
+        }
     }
 </script>
 
@@ -102,6 +109,9 @@
   }
   .head-content-right{
     float: right;
+  }
+  .centent{
+
   }
   .site-nav{
     line-height: 30px;
@@ -159,8 +169,9 @@
     width: 100%;
     height: 280px;
     background: #703F54;
-    position: absolute;
-    bottom: 0;
+    overflow: hidden;
+    position: relative;
+    /*bottom: 0;*/
   }
 
   .footer-content{
