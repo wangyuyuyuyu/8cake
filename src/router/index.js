@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PageFramework from '../components/PageFramework/PageFramework'
+// import PageFramework from '../components/PageFramework/PageFramework'
+import HomeContent from '../components/HomeContent/HomeContent'
+import Login from '../components/Login/Login'
 Vue.use(Router)
 
 export default new Router({
@@ -12,8 +14,13 @@ export default new Router({
     // },
     {
       path: '/',
-      name: 'PageFramework',
-      component: PageFramework
+      name: 'HomeContent',
+      component: HomeContent
+    },
+    {
+      path:'/login',
+      name:'Login',
+      component:Login
     }
   ]
 })
