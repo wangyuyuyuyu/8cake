@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <router-view/>
-    <Login></Login>
+
+    <!--<Login></Login>-->
+    <!--<HomeContent></HomeContent>-->
+
   </div>
 </template>
 
 <script>
-import Login from './components/Login/Login'
+
+// import Login from './components/Login/Login'
+// import HomeContent from './components/HomeContent/HomeContent'
 export default {
   name: 'App',
   components:{
-    Login
+    // Login,
+    // HomeContent
   }
 }
 </script>
