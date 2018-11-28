@@ -7,10 +7,13 @@
           <div class="head-content-right">
             <div class="site-nav clearfix">
               <div>
+
                 <!--<router-link to="/foods" tag="span" class="goods">商品</router-link>-->
                 <router-link to="/login"><span>登录</span></router-link>
+
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                 <a href="#"><span>注册</span></a>
+
               </div>
               <div>
                 <a href="">

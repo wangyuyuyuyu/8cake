@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="background-line"></div>
+      <div class="background-line" v-if=""></div>
       <div class="content">
         <div class="box-wrap">
           <div class="box-bg">
@@ -31,7 +31,7 @@
                 <table width="75%">
                   <tbody>
                   <tr><td height="40" align="center">没有8cake官方账户？</td></tr>
-                  <tr><td height="36" align="center"><img src="http://www.8cake.cn/images/zcpre.gif" alt="注册按钮"></td></tr>
+                  <tr><td height="36" align="center"><img src="../../assets/images/zc-btn.gif" alt="注册按钮"></td></tr>
                   <tr><td height="40" align="center" class="change-pwd">如果您忘记了登录密码，<span>点击这里</span>重设一个新密码。</td></tr>
                   </tbody>
                 </table>
@@ -73,6 +73,7 @@
   }
   .background-line{
     background: #aa6581;
+    width: 100%;
     height: 20px;
   }
   .content{
@@ -88,7 +89,7 @@
     text-align: left;
   }
   .box-bg{
-    background-image: url(http://www.8cake.cn/images/bg.jpg);
+    background-image: url(../../assets/images/login-bg.jpg);
     background-repeat: no-repeat;
     height: 413px;
     width: 978px;
