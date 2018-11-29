@@ -64,11 +64,11 @@
               <img src="../../assets/images/Ussweet.jpg" alt="">
               <img src="../../assets/images/UsworldCake.jpg" alt="">
             </div>
-            <div>
+            <div class="content-bottom">
               <p>	8CAKE 回归食物本有的健康和口感，</p>
               <p>精选世界优质材料的心意美味蛋糕，</p>
               <p>与身边的亲人、爱人、友人共同分享美味.......</p>
-              <p>八度蛋糕地址：沈阳市惠工店 惠工街121-5号；沈阳市太原街店</p>
+              <p class="address">八度蛋糕地址：沈阳市惠工店 惠工街121-5号；沈阳市太原街店</p>
             </div>
           </div>
         </div>
@@ -102,6 +102,8 @@
   .content{
     background: #ffffff;
     margin: 0 auto;
+    padding: 20px;
+    color: #78394e;
   }
   .boxwrap{
     margin: 0 auto;
@@ -195,5 +197,9 @@
   }
   .unactive{
     background-color: white;
+  }
+  .address{
+    font-size: 18px;
+    font-weight: bold;
   }
 </style>
