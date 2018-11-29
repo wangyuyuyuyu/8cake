@@ -34,7 +34,7 @@
             <ul class="menu clearfix">
               <router-link to="/"><li>首页</li></router-link>
               <span>|</span>
-              <a href=""><li>蛋糕名录</li></a>
+              <router-link to="/CakesList"><li>蛋糕名录</li></router-link>
               <span>|</span>
               <a href=""><li>服务介绍</li></a>
               <span>|</span>
