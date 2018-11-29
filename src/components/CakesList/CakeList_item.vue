@@ -1,5 +1,5 @@
 <template>
-    <div id="CakeList_item" >
+    <div id="CakeList_item">
       <img src="http://www.8cake.cn/upload/201501/21/201501212141440068.jpg" alt="">
       <div class="CakeList_item_content">
         <a href="">绿茶红豆<span class="span2">Green Tea red bean</span></a>
@@ -16,7 +16,22 @@
 
 <script>
     export default {
-        name: "CakeList_item"
+        name: "CakeList_item",
+      data:function () {
+        return {
+          arr:{}
+        }
+      },
+
+      // created(){
+      //   fetch('/api/0703php05/8cakePhp/Cake_item.php').then(res=>res.json()).then(res=>{
+      //       console.log(res);
+      //       this.arr = res;
+      //       console.log(this.arr);
+      //   }).catch(err=>{
+      //     console.log(err)
+      //   })
+      // }
     }
 </script>
 

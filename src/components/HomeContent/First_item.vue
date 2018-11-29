@@ -1,19 +1,15 @@
 <template>
     <div class="first_item">
       <router-link to="/detail">
-        <img src="http://www.8cake.cn/upload/201501/21/201501212141440068.jpg" alt="">
+        <img :src="obj.img1" alt="">
         <div class="first_item_div">
           <div style="margin-left: 10px">
-            <span class="span1">绿茶红豆</span><br>
-            <span class="span2">Green Tea red bean</span><br>
-            <span class="span3">总统淡奶油（法国）、芝士、黄油（新西兰)...</span><br>
-            <label><input type="radio" name="radio">1.5磅/168元</label>
-            <label><input type="radio" name="radio">2.0磅/248元</label>
-            <label><input type="radio" name="radio">3.0磅/348元</label>
-          </div>
-          <div class="first_item_click">
-            <span>详情>></span>
-            <span style="margin-left: 40px">立即购买</span>
+            <span class="span1">{{obj.cakeNameCN}}</span><br>
+            <span class="span2">{{obj.cakeNameEN}}</span><br>
+            <span class="span3">{{obj.describe.substr(0,20)}}...</span><br>
+            <label><input type="radio" name="radio">1.5磅/{{obj.price1}}元</label>
+            <label><input type="radio" name="radio">2.0磅/{{obj.price2}}元</label>
+            <label><input type="radio" name="radio">3.0磅/{{obj.price3}}元</label>
           </div>
         </div>
       </router-link>
@@ -23,10 +19,15 @@
 <script>
     export default {
       name: "First_item",
+      props:['obj'],
       data:function(){
         return {
-          judge:true
+          judge:true,
+
         }
+      },
+      mounted(){
+        // console.log(this.props);
       },
       methods:{
 

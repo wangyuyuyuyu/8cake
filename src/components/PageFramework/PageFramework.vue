@@ -12,7 +12,7 @@
                 <router-link to="/login"><span>登录</span></router-link>
 
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                <a href="#"><span>注册</span></a>
+                <router-link to="/Register"><span>注册</span></router-link>
 
               </div>
               <div>
