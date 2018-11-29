@@ -1,19 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import PageFramework from '../components/PageFramework/PageFramework'
 import HomeContent from '../components/HomeContent/HomeContent'
 import Login from '../components/Login/Login'
 import CakesList from '../components/CakesList/CakesList'
+import CakeDetail from '../components/CakeDetail/CakeDetail'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'Content',
-    //   component: Content
-    // },
     {
       path: '/',
       name: 'HomeContent',
@@ -25,9 +21,15 @@ export default new Router({
       component:Login
     },
     {
-      path:'/CakesList',
-      name:'CakesList',
-      component:CakesList
+      path: '/CakesList',
+      name: 'CakesList',
+      component: CakesList
+    },
+    {
+      path:'/detail',
+      name:'CakeDetail',
+      component:CakeDetail
+
     }
   ]
 })

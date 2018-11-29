@@ -1,20 +1,22 @@
 <template>
     <div class="first_item">
-      <img src="http://www.8cake.cn/upload/201501/21/201501212141440068.jpg" alt="">
-      <div class="first_item_div">
-        <div style="margin-left: 10px">
-          <span class="span1">绿茶红豆</span><br>
-          <span class="span2">Green Tea red bean</span><br>
-          <span class="span3">总统淡奶油（法国）、芝士、黄油（新西兰)...</span><br>
-          <label><input type="radio" name="radio">1.5磅/168元</label>
-          <label><input type="radio" name="radio">2.0磅/248元</label>
-          <label><input type="radio" name="radio">3.0磅/348元</label>
+      <router-link to="/detail">
+        <img src="http://www.8cake.cn/upload/201501/21/201501212141440068.jpg" alt="">
+        <div class="first_item_div">
+          <div style="margin-left: 10px">
+            <span class="span1">绿茶红豆</span><br>
+            <span class="span2">Green Tea red bean</span><br>
+            <span class="span3">总统淡奶油（法国）、芝士、黄油（新西兰)...</span><br>
+            <label><input type="radio" name="radio">1.5磅/168元</label>
+            <label><input type="radio" name="radio">2.0磅/248元</label>
+            <label><input type="radio" name="radio">3.0磅/348元</label>
+          </div>
+          <div class="first_item_click">
+            <span>详情>></span>
+            <span style="margin-left: 40px">立即购买</span>
+          </div>
         </div>
-        <div class="first_item_click">
-          <span>详情>></span>
-          <span style="margin-left: 40px">立即购买</span>
-        </div>
-      </div>
+      </router-link>
     </div>
 </template>
 
