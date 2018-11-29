@@ -91,12 +91,14 @@
 
 <script>
   import HomeContent from "../HomeContent/HomeContent"
+  import CakeList_item from '../CakesList/CakeList_item'
   // import Login from "../Login/Login"
 
   export default {
         name: "PageFramework",
         components:{
           HomeContent,
+          CakeList_item
           // Login
         }
     }

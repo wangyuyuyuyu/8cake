@@ -1,11 +1,13 @@
 <template>
     <div style="width: 950px;margin:0 auto;overflow: hidden;">
+      <CateGoryNav></CateGoryNav>
       <First_item style="width: 210px;float: left;margin-left:22px" v-for="v in arr" ></First_item>
     </div>
 </template>
 
 <script>
   import First_item from './First_item'
+  import CateGoryNav from '../CateGoryNav/CateGoryNav'
     export default {
       name: "HomeContent",
       data:function(){
@@ -14,7 +16,8 @@
         }
       },
       components:{
-        First_item
+        First_item,
+        CateGoryNav
       }
     }
 </script>
