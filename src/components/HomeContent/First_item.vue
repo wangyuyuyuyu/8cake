@@ -1,10 +1,9 @@
 <template>
     <div class="first_item">
-
         <img :src="obj.img1" alt="">
         <div class="first_item_div">
-          <div style="margin-left: 10px">
-              <span @click="routerTo(obj)" style="cursor: pointer" class="span1">{{obj.cakeNameCN}}</span><br>
+          <div style="margin-left: 10px;">
+              <span @click="routerTo(obj)" style="cursor: pointer;" class="span1">{{obj.cakeNameCN}}</span><br>
               <span class="span2">{{obj.cakeNameEN}}</span><br>
             <span class="span3">{{obj.describe.substr(0,20)}}...</span><br>
             <label><input type="radio" name="radio">1.5磅/{{obj.price1}}元</label>
@@ -50,6 +49,7 @@
     text-decoration:none;
     out-line: none;
     color:white;
+    margin-top: 10px;
   }
   .first_item{
     width: 210px;
@@ -80,7 +80,7 @@
   }
   .span1{
     font-size: 20px;
-
+    line-height: 40px;
   }
   .span2{
     font-size: 14px;
@@ -88,7 +88,7 @@
   }
   .span3{
     display: block;
-    height: 40px;
+    height: 30px;
     font-size: 14px;
   }
   .first_item_div label{
