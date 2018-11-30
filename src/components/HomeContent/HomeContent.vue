@@ -20,7 +20,7 @@
         CateGoryNav,
       },
       created(){
-        fetch('/api/0703php05/8cakePhp/Cake_item.php').then(res=>res.json()).then(res=>{
+        fetch(this.$api+'/Cake_item.php').then(res=>res.json()).then(res=>{
           console.log(res);
           this.arr = res;
           console.log(this.arr);

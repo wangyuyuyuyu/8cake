@@ -43,6 +43,7 @@
           </div>
           <div class="swiper-box">
             <!--这里是swiper-->
+            <Swiper></Swiper>
           </div>
         </div>
         </div>
@@ -92,13 +93,15 @@
 <script>
   import HomeContent from "../HomeContent/HomeContent"
   import CakeList_item from '../CakesList/CakeList_item'
+  import Swiper from '../Swiper/Swiper'
   // import Login from "../Login/Login"
 
   export default {
         name: "PageFramework",
         components:{
           HomeContent,
-          CakeList_item
+          CakeList_item,
+          Swiper
           // Login
         }
     }

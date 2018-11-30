@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {
       '/api': {
         // target: 'http://127.0.0.1/0703php05/8cakePhp',
-        target: 'http://127.0.0.1',
+        target: 'http://139.196.120.138',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/'
