@@ -1,18 +1,22 @@
 <template>
     <div class="first_item">
-      <router-link to="/detail">
+
         <img :src="obj.img1" alt="">
         <div class="first_item_div">
           <div style="margin-left: 10px">
-            <span class="span1">{{obj.cakeNameCN}}</span><br>
-            <span class="span2">{{obj.cakeNameEN}}</span><br>
+              <span @click="routerTo(obj)" style="cursor: pointer" class="span1">{{obj.cakeNameCN}}</span><br>
+              <span class="span2">{{obj.cakeNameEN}}</span><br>
             <span class="span3">{{obj.describe.substr(0,20)}}...</span><br>
             <label><input type="radio" name="radio">1.5磅/{{obj.price1}}元</label>
-            <label><input type="radio" name="radio">2.0磅/{{obj.price2}}元</label>
+            <label style="margin-left: 20px"><input type="radio" name="radio">2.0磅/{{obj.price2}}元</label><br>
             <label><input type="radio" name="radio">3.0磅/{{obj.price3}}元</label>
           </div>
+          <div class="first_item_click">
+            <span @click="routerTo(obj)">详情>></span>
+            <span style="margin-left: 80px">立即购买</span>
+          </div>
         </div>
-      </router-link>
+
     </div>
 </template>
 
@@ -23,14 +27,16 @@
       data:function(){
         return {
           judge:true,
-
+          path:`/detail`
         }
       },
       mounted(){
-        // console.log(this.props);
+        console.log(this.props);
       },
       methods:{
-
+        routerTo(obj){
+          this.$router.push({path:'/detail',query:{obj:obj}});
+        }
       }
     }
 </script>
@@ -39,6 +45,11 @@
   *{
     margin: 0;
     padding: 0;
+  }
+  a{
+    text-decoration:none;
+    out-line: none;
+    color:white;
   }
   .first_item{
     width: 210px;
@@ -68,35 +79,40 @@
     margin-top: 0px;
   }
   .span1{
-    font-size: 16px;
+    font-size: 20px;
 
   }
   .span2{
-    font-size: 12px;
+    font-size: 14px;
 
   }
   .span3{
-    font-size: 10px;
+    display: block;
+    height: 40px;
+    font-size: 14px;
   }
   .first_item_div label{
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 14px;
     margin:0;
     padding: 0;
     vertical-align: middle;
   }
   .first_item_div input{
-    width: 8px;
+    width: 10px;
     vertical-align: middle;
   }
   .first_item_click{
     width: 200px;
     border-top: 1px solid white;
-    font-size: 10px;
+    font-size: 14px;
+    margin-top: 10px;
     margin-left: 10px;
+    line-height: 30px;
   }
   .first_item_click span{
     cursor: pointer;
+
   }
 
 </style>

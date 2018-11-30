@@ -3,27 +3,27 @@
       <div class="detail-header">
         <div class="detail-header-left">
           <div class="detail-bigimg">
-            <img :src="currentItemUrl" alt="">
+            <img :src="this.judge?this.$route.query.obj.img2:imgPath" v-show="this.$route.query.obj.img2" alt="">
           </div>
           <div class="detail-imgs">
-            <img @mouseenter="changeImgUrl(0)" :src="itemUrlArr[0]" alt="">
-            <img @mouseenter="changeImgUrl(1)" :src="itemUrlArr[1]" alt="">
-            <img @mouseenter="changeImgUrl(2)" :src="itemUrlArr[2]" alt="">
+            <img id="img2" @mouseenter="changeImgUrl(2)" :src="this.$route.query.obj.img2" alt="">
+            <img id="img3" @mouseenter="changeImgUrl(3)" :src="this.$route.query.obj.img3" alt="">
+            <img id="img4" @mouseenter="changeImgUrl(4)" :src="this.$route.query.obj.img4" alt="">
           </div>
         </div>
         <div class="detail-header-right">
-          <p class="cake-name">Rum Cheese Cake</p>
+          <p class="cake-name">{{this.$route.query.obj.cakeNameCN}}</p>
           <img src="../../assets/images/tt.png" alt="">
-          <p class="cake-name">朗姆芝士</p>
+          <p class="cake-name">{{this.$route.query.obj.cakeNameEN}}</p>
           <ul class="cake-name-wrapper">
             <li class="cake-price">
-              <input type="radio" name="cakePrice" id="weight1"><label for="weight1">1.5磅：约13*13cm</label><span class="price">【￥168】</span>
+              <input type="radio" name="cakePrice" id="weight1"><label for="weight1">1.5磅：约13*13cm</label><span class="price">【￥{{this.$route.query.obj.parce1}}】</span>
             </li>
             <li class="cake-price">
-              <input type="radio" name="cakePrice" id="weight2"><label for="weight2">1.5磅：约13*13cm</label><span class="price">【￥168】</span>
+              <input type="radio" name="cakePrice" id="weight2"><label for="weight2">1.5磅：约13*13cm</label><span class="price">【￥{{this.$route.query.obj.parce2}}】</span>
             </li>
             <li class="cake-price">
-              <input type="radio" name="cakePrice" id="weight3"><label for="weight3">1.5磅：约13*13cm</label><span class="price">【￥168】</span>
+              <input type="radio" name="cakePrice" id="weight3"><label for="weight3">1.5磅：约13*13cm</label><span class="price">【￥{{this.$route.query.obj.parce3}}】</span>
             </li>
           </ul>
           <div class="btn-wrapper">
@@ -32,28 +32,28 @@
           </div>
           <div class="v-line"></div>
           <p class="detail-text">
-            柠檬的微微苦涩，酸酸的奶酪味和淡淡的朗姆酒香结合，适合喜欢清淡芝士口的人，一片玫瑰的海洋，映衬着少男少女那纯净的心境，总像有数不清的芬芳思念，诉不尽的感恩眷恋，所有声音都在轻声呢喃着誓约长久。
+            {{this.$route.query.obj.describe}}
           </p>
         </div>
       </div>
       <div class="goods-detail-wrapper">
         <div class="goods-detail-tag">
-          商品详情
+          {{this.$route.query.obj.describe}}
         </div>
         <div class="goods-detail-centent">
           <div>
-            <span>口味：柠檬</span>
-            <span>适合人群：各类人群</span>
-            <span>0-4℃保藏12小时</span>
+            <span>口味：{{this.$route.query.obj.flavor}}</span>
+            <span>适合人群：{{this.$route.query.obj.suitable}}</span>
+            <span>{{this.$route.query.obj.fresh}}</span>
           </div>
           <div>
-            <span>甜度：</span>
-            <span>最佳食温：8℃最佳食用</span>
-            <span>原材料：总统淡奶油（法国），芝士，黄油（新西兰），朗姆酒（牙买加），柠檬（美国），砂糖（韩国），牛奶（德国）等</span>
+            <span>甜度：{{this.$route.query.obj.score}}</span>
+            <span>最佳食温：{{this.$route.query.obj.temperature}}</span>
+            <span>原材料：{{this.$route.query.obj.material}}</span>
           </div>
         </div>
         <p class="goods-detail-text">
-          柠檬的微微苦涩，酸酸的奶酪味和淡淡的朗姆酒香结合，适合喜欢清淡芝士口的人，一片玫瑰的海洋，映衬着少男少女那纯净的心境，总像有数不清的芬芳思念，诉不尽的感恩眷恋，所有声音都在轻声呢喃着誓约长久。
+          {{this.$route.query.obj.describe}}
         </p>
         <div class="goods-detail-tips">
           <p>&nbsp;&nbsp;小提示:</p>
@@ -84,16 +84,27 @@
         name: "CakeDetail",
       data:function () {
         return {
-          currentItemUrl:"http://www.8cake.cn/upload/201603/09/201603091518118906.gif",
-          itemUrlArr:["http://www.8cake.cn/upload/201603/09/201603091518118906.gif","http://www.8cake.cn/upload/201603/09/thumb_201603091519432812.gif","http://www.8cake.cn/upload/201603/09/thumb_201603091519463593.jpg"]
+          imgPath:'',
+          judge:true
         }
       },
       methods:{
         changeImgUrl(index){
-          this.currentItemUrl=this.itemUrlArr[index];
+          this.judge = false;
+          this.imgPath = document.getElementById('img'+index).src;
+          console.log(index);
+        }
+      },
+      mounted(){
+        // var url= document.getElementById('img2').src;
+        // this.imgPath = url;
+      },
+      computed:{
+        imgUrl(){
+          // var url = document.getElementById('img2').src;
+          // return url
         }
       }
-
     }
 </script>
 

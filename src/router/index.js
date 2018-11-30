@@ -31,7 +31,7 @@ export default new Router({
     },
     {
       path:'/detail',
-      name:'CakeDetail',
+      name:'detail',
       component:CakeDetail
     },
     {
