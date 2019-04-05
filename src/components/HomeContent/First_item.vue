@@ -36,6 +36,9 @@
         routerTo(obj){
           this.$router.push({path:'/detail',query:{obj:obj}});
         }
+      },
+      created(){
+
       }
     }
 </script>
